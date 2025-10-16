@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar style="font-family: 'Luckiest Guy', cursive;"> <!-- Apply font to the entire toolbar -->
+    <ion-buttons slot="start">  
+      <ion-button (click)="toggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title (click)="goHome()" style="font-family: 'Luckiest Guy', cursive;">ReCHARGE</ion-title> <!-- Apply font to the title -->
+    <ion-buttons slot="end">
+      <ion-button (click)="openCartModal()" style="margin-right: 20px;"> <!-- Adjust button -->
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+        <ion-badge 
+          *ngIf="cartCount > 0" 
+          color="danger" 
+          style="font-size: 9px; transform: scale(1.2); padding: 2px; align-items: center; height: 12px; width: 15px; margin-right:-12px;"> <!-- Adjust badge -->
+          {{ cartCount }}
+        </ion-badge>
+      </ion-button>
+    </ion-buttons> 
+  </ion-toolbar>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+</ion-header>
+
+
+<ion-content>
+<div class="banner">
+</div>
+
+<div class="product-container">
+  <!-- Product Card 1 -->
+  <div class="product-card">
+    <img src="assets/image/C2.png" alt="Truffles" class="product-image" />
+    <h2 class="product-name">C2 Iced Tea</h2>
+    <p class="product-price">₱59.99</p>
+    
+    <!-- Quantity Selector -->
+    <div class="quantity-selector">
+      <button (click)="decreaseQuantity(0)">-</button>
+      <input type="number" [value]="quantities[0]" readonly />
+      <button (click)="increaseQuantity(0)">+</button>
+    </div>
+ 
+    <button class="add-to-cart-btn" (click)="addToCart(0)">Add to Cart</button>
+  </div>
+
+
+  <div class="product-card">
+    <img src="assets/image/DelmontePineapple.png" alt="Chocolate Bar" class="product-image" />
+    <h2 class="product-name">Delmonte Pineapple</h2>
+    <p class="product-price">₱120.99</p>
+    
+    <div class="quantity-selector">
+      <button (click)="decreaseQuantity(1)">-</button>
+      <input type="number" [value]="quantities[1]" readonly />
+      <button (click)="increaseQuantity(1)">+</button>
+    </div>
+    
+    <button class="add-to-cart-btn" (click)="addToCart(1)">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="assets/image/FNR.png" alt="Milk Chocolate" class="product-image" />
+    <h2 class="product-name">Fruity Juicy</h2>
+    <p class="product-price">₱229.99</p>
+    
+    <div class="quantity-selector">
+      <button (click)="decreaseQuantity(2)">-</button>
+      <input type="number" [value]="quantities[2]" readonly />
+      <button (click)="increaseQuantity(2)">+</button>
+    </div>
+
+    <button class="add-to-cart-btn" (click)="addToCart(2)">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="assets/image/PureJC.png" alt="Fudge" class="product-image" />
+    <h2 class="product-name">Pure Juice</h2>
+    <p class="product-price">₱250.99</p>
+   
+    <div class="quantity-selector">
+      <button (click)="decreaseQuantity(3)">-</button>
+      <input type="number" [value]="quantities[3]" readonly />
+      <button (click)="increaseQuantity(3)">+</button>
+    </div>
+  
+    <button class="add-to-cart-btn" (click)="addToCart(3)">Add to Cart</button>
+  </div>
+</div>
+</ion-content>

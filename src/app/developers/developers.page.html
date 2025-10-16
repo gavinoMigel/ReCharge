@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">  <!-- This positions buttons on the left side -->
+      <ion-button (click)="toggleMenu()">
+        <ion-icon name="menu"></ion-icon>  <!-- Menu icon -->
+      </ion-button>
+    </ion-buttons>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <ion-title (click)="goHome()">ReCharge</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openCartModal()" style="margin-right: 20px;"> <!-- Adjust button -->
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+        <ion-badge 
+          *ngIf="cartCount > 0" 
+          color="danger" 
+          style="font-size: 9px; transform: scale(1.2); padding: 2px; align-items: center; height: 12px; width: 15px; margin-right:-12px;"> <!-- Adjust badge -->
+          {{ cartCount }}
+        </ion-badge>
+      </ion-button>
+    </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <h1 class="team">Meet Our Team</h1>
+  </div>
+  <div class="developer-section section-2">
+    <div class="developer-card">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <img src="/assets/image/homerpogi.JPG" class="profile-Homer" alt="Homer">
+          </ion-col>
+          <ion-col size="6" class="gab-info">
+            <h2 class="name">Homer Sumagpao</h2>
+            <p><strong>Role:</strong>FrontEnd Developer</p>
+            <p><strong>Skills/Expertise:</strong></p>
+            <ul>
+              <li>Frontend Development</li>
+              <li>API Integration</li>
+              <li>UI/UX Designer</li>
+            </ul>
+            <p><strong>Contact Information:</strong></p>
+            <p class="contact-info-gab">
+              <ion-icon name="mail-outline"></ion-icon>qhcsumagpao&#64;tip.edu.ph
+            </p>
+            <p class="contact-info-gab">
+              <ion-icon name="call-outline"></ion-icon> 09123451231
+            </p>            
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+
+  <div class="developer-section section-1">
+    <div class="developer-card">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6" class="Neil-info">
+            <h2 class="name">Cristan Neil Sevillano</h2>
+            <p><strong>Role:</strong>BackEnd Developer</p>
+            <p><strong>Skills/Expertise:</strong></p>
+            <ul>
+              <li>System Architecture</li>
+              <li>Ionic Framework</li>
+              <li>Back End Development</li>
+            </ul>
+            <p><strong>Contact Information:</strong></p>
+            <p class="contact-info-dev1">
+              <ion-icon name="mail-outline" style="color: rgb(0, 0, 0);"></ion-icon>qcnasevillano&#64;tip.edu.ph
+            </p>
+            <p class="contact-info-dev1">
+              <ion-icon name="call-outline"  style="color: rgb(0, 0, 0);"></ion-icon> 09226390285
+            </p>          
+          </ion-col>
+          <ion-col size="6">
+            <img src="/assets/image/Neil.jpg" class="profile-eric" alt="eric"> <!--Change-->
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+
+
+  
+
+  <!-- Logo Section -->
+<div class="logo-section">
+ <!-- Instagram Feed / Social Media Integration Section -->
+ <div class="instagram-feed" style="background-color: #81d2e0; padding: 40px 20px; text-align: center; color: #000000;">
+  <h2 style="font-family: 'Luckiest Guy', cursive; font-size: 30px; margin-bottom: 20px;">Follow Us on Instagram</h2>
+  <p style="font-family: 'Roboto', sans-serif; font-size: 16px;">Get inspired and share your tots for energy drink with #ReCharge</p>
+  <div class="social-icons" style="margin-top: 20px;">
+    <ion-icon name="logo-instagram" style="font-size: 40px; color: #000000; margin-right: 20px;"></ion-icon>
+    <ion-icon name="logo-facebook" style="font-size: 40px; color: #000000; margin-right: 20px;"></ion-icon>
+    <ion-icon name="logo-twitter" style="font-size: 40px; color: #000000;"></ion-icon>
+  </div>

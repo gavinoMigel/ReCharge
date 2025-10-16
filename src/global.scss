@@ -1,0 +1,104 @@
+ion-toolbar ion-title {
+  color: #fff !important;
+  cursor: pointer;
+}
+body, ion-content {
+  --background: linear-gradient(135deg, #ffdb23 0%, #1bf0dc 100%) !important;
+  background: linear-gradient(135deg, #ffdb23 0%, #1bf0dc 100%) !important;
+}
+ion-header, ion-toolbar {
+  --background: #000000 !important;
+}
+
+ion-toolbar ion-button,
+ion-toolbar ion-icon {
+  color: #fff !important;
+  --color: #fff !important;
+}
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+ion-modal {
+    --width: 85%;
+    --height: 70%;
+    --border-radius: 16px;
+    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  
+  ion-modal::part(backdrop) {
+    background: rgba(209, 213, 219);
+    opacity: 5;
+  }
+  
+  ion-modal ion-toolbar {
+    --background: #ffffff;
+    --color: white;
+  }
+
+  ion-modal ion-button{
+    --color: white;
+  }
+
+  ion-title {
+    text-align: start;
+  }
+
+  /* global.scss or payment.page.scss */
+.custom-alert .alert-wrapper {
+  background-color: #f8f8f8; /* Light background */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.custom-alert .alert-header {
+  color: #4CAF50; /* Green header */
+  font-size: 20px;
+  text-align: center;
+}
+
+.custom-alert .alert-message {
+  color: #000; /* Black text */
+  font-size: 16px;
+  text-align: center;
+}
+
+.custom-alert .alert-button {
+  background-color: #DD4D89; /* Button color */
+  color: white;
+  font-size: 16px;
+}

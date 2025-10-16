@@ -1,0 +1,110 @@
+/* Apply background color and font styling to the modal header */
+ion-header {
+  background-color: #FF9900; /* Correct chocolate orange color */
+  font-family: 'Luckiest Guy', cursive; /* Creative cursive font */
+  color: white; /* White text for contrast */
+  border-radius: 10px 10px 0 0; /* Rounded corners on top */
+}
+
+ion-toolbar {
+  background-color: #FF9900; /* Ensure the toolbar matches the header */
+}
+
+ion-title {
+  color: white; /* White title text */
+  font-family: 'Luckiest Guy', cursive; /* Creative font */
+  font-size: 1.8rem; /* Slightly bigger title */
+}
+
+ion-buttons {
+  color: white; /* White "Close" button text */
+}
+
+.close-btn {
+  background-color: #FF9900; /* Close button with the same theme color */
+  border-radius: 8px; /* Slightly rounded corners */
+  padding: 8px 16px;
+  color: white;
+}
+
+.close-btn:hover {
+  background-color: #ec8f04; /* Hover effect for close button */
+}
+
+/* Style for cart items */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #f8f8f8; /* Light background for each cart item */
+  border-radius: 10px; /* Rounded corners for cart items */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-5px); /* Hover effect for cart items */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+.item-details {
+  color: #3E2723; /* Dark chocolate color for item text */
+}
+
+.item-details h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cart-summary-label,
+.label {
+  color: #3E2723; /* Accent color for labels */
+  font-weight: bold;
+}
+
+.cart-summary-value {
+  color: #3E2723; /* Chocolate color for values */
+  font-weight: 500;
+}
+
+.cart-summary {
+  font-size: 14px; /* Slightly smaller text for summary */
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-summary-value {
+  font-size: 1rem; /* Larger text for total amount */
+}
+
+.checkout-btn {
+  background-color: #FF9900; /* Bright background for checkout button */
+  color: white;
+  border-radius: 10px;
+}
+
+.checkout-btn:hover {
+  background-color: #ec8f04; /* Hover effect for checkout button */
+}
+
+ion-footer {
+  background-color: transparent; /* Transparent footer background */
+  padding: 20px; /* Add padding to the footer */
+  text-align: center; /* Center the checkout button */
+}
+
+/* Style for delete button */
+.delete-btn {
+  background-color: #DD4D89; /* Accent color for delete button */
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.delete-btn:hover {
+  background-color: #c13555; /* Darker pink hover for delete button */
+}

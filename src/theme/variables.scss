@@ -1,0 +1,21 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+
+// Add custom pink color
+:root {
+    --ion-color-pink: #ff9900; /* Customize this color code as needed */
+    --ion-color-pink: #ff9900; /* RGB value for the pink color */
+    --ion-color-pink-contrast: #ffffff; /* Text color for contrast on pink background */
+    --ion-color-pink-shade: #ff9900;
+    --ion-color-pink-tint: #ff9900;
+  }
+  
+  :root {
+    --ion-color-custom: #ff9900;
+    --ion-color-custom-rgb: 221, 77, 137;
+    --ion-color-custom-contrast: #ffffff; /* Adjust for text contrast */
+    --ion-color-custom-contrast-rgb: 255, 255, 255;
+    --ion-color-custom-shade: #ff9900; /* Slightly darker shade */
+    --ion-color-custom-tint: #ff9900; /* Slightly lighter tint */
+  }
+  

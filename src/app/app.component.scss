@@ -1,0 +1,108 @@
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 16px;
+  height: 220px;
+  width: 100%; /* Make it responsive */
+  background: linear-gradient(45deg, #4e90ce, #76d1f5, #3E2723); /* Updated gradient */
+  border-radius: 15px 15px 15px 50px;
+  margin-top: -40px;
+  margin-bottom: 60px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.profile-section:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+ion-avatar {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  margin-left: 16px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(218, 211, 211, 0.2);
+  transform: rotate(5deg); /* Subtle angle */
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #73b8d8; /* Updated color for name */
+  position: absolute;
+  margin-left: 120px;
+  margin-top: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;  
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-size: 1em;
+  color: #637388; 
+  margin-left: 120px;
+  margin-top: 60px;
+  font-style: italic;
+}
+
+ion-title {
+  font-family: 'Spicy Rice', sans-serif;
+  font-size: 1.8em;
+  color: #92cbec;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+ion-list.menu-items {
+  margin-top: 20px;
+}
+
+ion-list.menu-items ion-item {
+  --ion-item-border-color: transparent;
+  color: #7beaee;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  cursor: pointer; /* Ensure hover is visible */
+}
+
+ion-list.menu-items ion-item:hover {
+  transform: translateX(10px); /* Move slightly right on hover */
+  background-color: #f5e0e0; /* Lighter hover background */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  color: #d35400; /* Change text color on hover */
+}
+
+ion-list.menu-items ion-item:hover ion-icon {
+  color: #d35400; /* Change icon color */
+  transform: scale(1.2); /* Enlarge icon slightly */
+  transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+ion-list.menu-items ion-item:hover ion-label {
+  color: #d35400; /* Change label color on hover */
+}
+
+ion-list.menu-items ion-item ion-icon {
+  font-size: 1.3rem;
+  color: #FFB74D;
+  margin-right: 15px; /* Space between icon and text */
+}
+
+ion-list.menu-items ion-item ion-label {
+  font-weight: 600; /* Bolder text */
+  font-size: 1rem;
+}
+
+ion-list {
+  padding-left: 0; /* Remove padding for cleaner design */
+}

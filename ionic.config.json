@@ -1,0 +1,7 @@
+{
+  "name": "frost&frizz",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

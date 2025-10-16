@@ -1,0 +1,135 @@
+ion-icon {
+  color: #ff9900;
+}
+
+ion-title {
+  font-family: 'Spicy Rice', sans-serif;
+  font-size: 25px;
+  color: #3E2723;
+  letter-spacing: 1.5px;
+  margin-left: 10px;
+}
+
+ion-card {
+  margin-bottom: 20px;
+}
+
+ion-button {
+  margin-top: 10px;
+}
+
+
+.product-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  width: calc(50% - 20px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.188);
+  transition: all 0.3s ease;
+  background-color: #fff; /* Adding background color for the product card */
+  overflow: hidden; /* Prevents any content from overflowing */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.product-image {
+  background: linear-gradient(45deg, #FC8EAC, #FFC1CC, #E75480);
+  width: 100%;
+  height: 200px; /* Ensures consistent height */
+  object-fit: cover; /* Prevents image distortion */
+  border-radius: 15px;
+}
+
+.product-name {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #3E2723;
+}
+
+.product-price {
+  font-size: 1.2em;
+  color: #3E2723;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.quantity-selector button {
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.quantity-selector input {
+  width: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-to-cart-btn {
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #ec8f04;
+}
+
+.banner {
+  width: 100%;
+  height: 92.1vh;                     // full screen height
+  position: relative;                // for overlaying product container
+  background-image: url('/assets/image/C2Banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product-container {
+  position: absolute;              // overlay
+  bottom: 130px;                    // distance from bottom of banner
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+  width: 90%;                      // adjust container width; 
+}
+.product-card {
+  width: 200px;                    // card width
+  background-color: rgba(255, 255, 255, 0.774); // semi-transparent
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+  .product-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+}

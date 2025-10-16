@@ -1,0 +1,125 @@
+ion-header { 
+  ion-toolbar {
+    background-color: #8ce1f7;  /* Background color for the toolbar */
+    color: white;  /* Default text color in the toolbar */
+
+    ion-title {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 25px;
+      color: #73d4ec;  /* Title color set to #ff9900 */
+      letter-spacing: 1.5px;
+      margin-left: 10px;
+    }
+
+    ion-buttons {
+      ion-icon {
+        color: #81a7ee;  /* Icon color set to #ff9900 */
+      }
+
+      ion-badge {
+        font-size: 9px;
+        transform: scale(1.2);
+        padding: 2px;
+        align-items: center;
+        height: 12px;
+        width: 15px;
+        color: #7fbee9;  /* Badge text color */
+      }
+    }
+  }
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+
+  .team {
+    font-family: 'Luckiest Guy', cursive;
+    color: #000000;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+.developer-section {
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+
+  .developer-card {
+    background: linear-gradient(45deg, #70b4f5, #14a2e4, #3E2723);
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    ion-row {
+      align-items: center;
+
+      ion-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .name {
+          font-size: 24px;
+          color: #ffffff;  /* Changed color to #3E2723 */
+          font-family: 'Luckiest Guy', cursive;
+          margin-bottom: 10px;
+        }
+
+        ul {
+          list-style-type: disc;
+          padding-left: 20px;
+          color: white;
+
+          li {
+            font-size: 16px;
+            margin-bottom: 5px;
+          }
+        }
+
+        .contact-info-Homer,
+        .contact-info-Neil {
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          color: rgb(0, 0, 0);
+        }
+      }
+
+      .profile-Homer
+      .profile-Neil {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+}
+
+.logo-section {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  .mascot-logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-family: 'Spicy Rice', sans-serif;
+    font-size: 36px;
+    color: #9fe3f8;
+    line-height: 1.2;
+  }
+}

@@ -1,0 +1,60 @@
+<ion-content class="home-content">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <div class="login-centered1" style="background-image: url('../../assets/image/signupbg.png'); background-size: cover; background-position: center; height: 100vh;">
+    <form [formGroup]="signuppageForm">
+      <div class="logo-container">
+        <h1 class="create-account">Create an Account</h1>
+      </div>
+
+      <div class="ion-items-container">
+        <!-- First Name -->
+        <ion-item class="home-ion-items">
+          <ion-icon name="person-outline" slot="start" class="home-ion-icons"></ion-icon>
+          <ion-input placeholder="Username" formControlName="userName" required></ion-input>
+        </ion-item>
+  
+        <!-- Email -->
+        <ion-item class="home-ion-items">
+          <ion-icon name="mail-outline" slot="start" class="home-ion-icons"></ion-icon>
+          <ion-input placeholder="Email" formControlName="email" type="email" required></ion-input>
+        </ion-item>
+        <ion-label *ngIf="signuppageForm.get('email')?.hasError('email') && signuppageForm.get('email')?.touched">
+          <span class="error-message">Please enter a valid email address.</span>
+        </ion-label>
+  
+        <!-- Password -->
+        <ion-item class="home-ion-items">
+          <ion-icon name="lock-closed-outline" slot="start" class="home-ion-icons"></ion-icon>
+          <ion-input placeholder="Password" type="password" formControlName="password" required></ion-input>
+        </ion-item>
+        <ion-label *ngIf="signuppageForm.get('password')?.hasError('minlength') && signuppageForm.get('password')?.touched">
+          <span class="error-message">Password must be at least 6 characters.</span>
+        </ion-label>
+  
+        <!-- Confirm Password -->
+        <ion-item class="home-ion-items">
+          <ion-icon name="lock-closed-outline" slot="start" class="home-ion-icons"></ion-icon>
+          <ion-input placeholder="Confirm Password" type="password" formControlName="confirmPassword" required></ion-input>
+        </ion-item>
+  
+        <ion-label *ngIf="signuppageForm.get('confirmPassword')?.touched">
+          <ng-container *ngIf="signuppageForm.hasError('mismatch')">
+            <span class="error-message">Passwords do not match.</span>
+          </ng-container>
+          <ng-container *ngIf="!signuppageForm.hasError('mismatch') && signuppageForm.get('confirmPassword')?.valid">
+            <span class="success-message">Passwords match!</span>
+          </ng-container>
+        </ion-label>
+      </div>
+  
+      <ion-button class="common-button1" type="submit" [disabled]="signuppageForm.invalid" (click)="showSuccessAlert()">
+        SIGN UP
+      </ion-button>    
+  
+      <p class="signin-link">
+        Already have an account? 
+        <a routerLink="/login" class="link"><u>Login</u></a>
+      </p>
+    </form>
+  </div>
+</ion-content>

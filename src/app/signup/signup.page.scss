@@ -1,0 +1,138 @@
+.home-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.login-centered1 {
+  background-image: url('/assets/image/choco.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+
+.create-account {
+  font-size: 36px; /* Increased font size for better readability */
+  margin-top: 0;
+  font-family: 'Luckiest Guy', cursive;
+  color: #42699c;
+  line-height: 1.2; /* Improved line height for legibility */
+}
+
+.ion-items-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px; /* Ensure the container width is responsive */
+  justify-content: center;
+}
+
+.signin-link {
+  margin-top: 50px;
+  font-size: 16px; /* Increased font size for better readability */
+  color: #bfbfbf;
+}
+
+.signin-link .link {
+  color: #42699c;
+  text-decoration: none;
+}
+
+ion-item.home-ion-items {
+  width: 100%; /* Use full width of the container */
+  max-width: 300px; /* Ensure each item has a maximum width */
+  --inner-border-width: 0;
+  margin: 10px 0;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.46);
+}
+
+ion-icon.home-ion-icons {
+  color: #2c2c2c;
+}
+
+.invalid {
+  border-color: red !important;
+}
+
+ion-item .invalid {
+  --highlight-color: red;
+}
+
+ion-label {
+  font-size: 16px; /* Increased font size for better readability */
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 14px; /* Increased error message size for better legibility */
+  margin-top: 5px;
+  line-height: 1.5; /* Improved line height for error message clarity */
+}
+
+.success-message {
+  color: #28a745;
+  font-size: 14px; /* Increased success message size */
+  margin-top: 5px;
+  font-weight: bold;
+  line-height: 1.5; /* Improved line height for success message clarity */
+}
+
+.common-button1 {
+  --background: #42699c; 
+  --background-activated: #42699c;
+  --background-focused: #42699c;
+  --background-hover: #42699c;
+  margin-top: 30px; /* Add space above button */
+  margin-bottom: 10px;
+  color: #fff !important;
+  font-size: 18px; /* Increased font size for better button text readability */
+  border-radius: 10px !important;
+  padding: 12px 0;
+}
+
+@media (max-width: 600px) {
+  .create-account {
+    font-size: 40px; /* Increased for mobile readability */
+  }
+
+  .ion-items-container {
+    gap: 10px;
+    width: 100%; 
+  }
+
+  .common-button1 {
+    width: 55%;
+    margin-top: 20px;
+    font-size: 18px; /* Adjusted font size for mobile */
+  }
+
+  .signin-link {
+    margin-top: 40px;
+    font-size: 14px;
+  }
+
+  .signin-link .link {
+    font-size: 16px; /* Increased for mobile */
+  }
+}

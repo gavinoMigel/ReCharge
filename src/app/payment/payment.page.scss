@@ -1,0 +1,72 @@
+ion-icon{
+    color: #ff9900;
+  }
+  
+  ion-title{
+    font-family: 'Spicy Rice', sans-serif;
+    font-size: 25px;
+    color:#3E2723;
+    letter-spacing: 1.5px;
+  }
+
+  .payment-header {
+    background-color: #ff9900;
+  }
+
+.payment-h1{
+    font-family: 'Spicy Rice', sans-serif;
+    color: 3E2723;
+    margin-bottom: 20px;
+}  
+
+.payment-info {
+    width: 350px;
+    background: #ffce84;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+form {
+    padding: 16px;
+  }
+  
+
+  .info-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  
+  .info-label {
+    font-weight: bolder;
+    font-size: 16px;
+    color: #3E2723;
+    margin-bottom: 8px;
+  }
+  
+  .info-content {
+    display: flex;             
+    align-items: center;        
+    justify-content: flex-start; 
+    padding: 8px 0;
+  }
+
+  .icon {
+    width: 30px;              
+    height: 30px;              
+    margin-right: 12px;        
+  }
+  
+  ion-input {
+    --background: white;
+    --border-radius: 8px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --color: #333;
+    --border-color: #ccc;
+    flex: 1; 
+  }
+  

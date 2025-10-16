@@ -1,0 +1,39 @@
+<ion-header>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="toggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>ReCharge</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openCartModal()" style="margin-right: 20px;"> <!-- Adjust button -->
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+        <ion-badge 
+          *ngIf="cartCount > 0" 
+          color="danger" 
+          style="font-size: 9px; transform: scale(1.2); padding: 2px; align-items: center; height: 12px; width: 15px; margin-right:-12px;"> <!-- Adjust badge -->
+          {{ cartCount }}
+        </ion-badge>
+      </ion-button>
+    </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="about-content">
+  <div class="about-container">
+    <img src="/assets/image/aboutus.png" class="about-info" alt="">
+  </div>
+   <!-- Instagram Feed / Social Media Integration Section -->
+   <div class="instagram-feed" style="background-color: #3E2723; padding: 40px 20px; text-align: center; color: #F5F5F5;">
+    <h2 style="font-family: 'Luckiest Guy', cursive; font-size: 30px; margin-bottom: 20px;">Follow Us on Instagram</h2>
+    <p style="font-family: 'Roboto', sans-serif; font-size: 16px;">Fuel your day and elevate your energy with #ReCharge!</p>
+    <div class="social-icons" style="margin-top: 20px;">
+      <ion-icon name="logo-instagram" style="font-size: 40px; color: #F5F5F5; margin-right: 20px;"></ion-icon>
+      <ion-icon name="logo-facebook" style="font-size: 40px; color: #F5F5F5; margin-right: 20px;"></ion-icon>
+      <ion-icon name="logo-twitter" style="font-size: 40px; color: #F5F5F5;"></ion-icon>
+    </div>
+  </div>
+</ion-content>
+

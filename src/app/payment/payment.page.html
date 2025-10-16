@@ -1,0 +1,66 @@
+<ion-header>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <ion-toolbar style="font-family: 'Luckiest Guy', cursive;"> <!-- Apply font to the entire toolbar -->
+    <ion-buttons slot="start">  
+      <ion-button (click)="toggleMenu()">
+        <ion-icon name="menu"></ion-icon> 
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="font-family: 'Luckiest Guy', cursive;">ReCharge</ion-title> <!-- Apply font to the title -->
+  </ion-toolbar>
+</ion-header>
+
+
+<div class="payment-header">
+  <h1 class="payment-h1" style="text-align: center; font-family: 'Luckiest Guy', cursive;">Payment</h1>
+</div>
+
+
+<ion-content>
+  <div class="payment-info">
+    <form (ngSubmit)="processPayment()" #paymentForm="ngForm">
+
+
+      <div class="info-row">
+        <div class="info-label">
+          <span>Payment Method</span>
+        </div>
+        <div class="info-content">
+          <img src="assets/image/paymayah.png" alt="Payment Method Icon" class="icon" />
+          <ion-input type="text" [(ngModel)]="paymentMethod" name="paymentMethod" required placeholder="Enter payment method"></ion-input>
+        </div>
+      </div>
+  
+      <div class="info-row">
+        <div class="info-label">
+          <span>Phone Number</span>
+        </div>
+        <div class="info-content">
+          <img src="assets/image/flag.png" alt="Payment Method Icon" class="icon" />
+          <ion-input type="text" [(ngModel)]="phoneNumber" name="phoneNumber" required placeholder="Enter phone number"></ion-input>
+        </div>
+      </div>
+  
+   
+      <div class="info-row">
+        <div class="info-label">
+          <span>Address</span>
+        </div>
+        <div class="info-content">
+          <img src="assets/image/address.png" alt="Payment Method Icon" class="icon" />
+          <ion-input type="text" [(ngModel)]="address" name="address" required placeholder="Enter address"></ion-input>
+        </div>
+      </div>
+  
+
+      <ion-button 
+          expand="full" 
+          type="submit" 
+          style="--background: #ff9900; --color: #3E2723;" 
+          [disabled]="paymentForm.invalid">
+          Make Payment
+      </ion-button>
+
+    </form>
+</div>
+</ion-content>
