@@ -1,14 +1,89 @@
-// Android-specific adjustments for product container and cards
+:host {
+  ion-content {
+    --background: linear-gradient(135deg, #ffdb23 0%, #1bf0dc 100%);
+    background: linear-gradient(135deg, #ffdb23 0%, #1bf0dc 100%);
+  }
+}
+
+swiper-container {
+  width: 100%;
+  height: 600px; // Set a fixed height for the slider container
+  margin-top: 20px;
+
+  // Styles for the navigation buttons ( < and > )
+  --swiper-navigation-color: #ff9900;
+
+  // Styles for the pagination dots (...)
+  --swiper-pagination-color: #ff9900;
+  --swiper-pagination-bullet-inactive-color: #ccc;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+}
+
+// Style for the slide itself (the container)
+swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; // Reduced gap from 200px
+  padding: 20px 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.product-card {
+  position: relative;
+  text-align: center;
+  width: 100%; 
+  height: 100%; // Changed from 350px
+  transition: all 0.3s ease;
+  margin: 0 auto;
+  padding: 0; // Removed 15px padding
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.product-image {
+  background: linear-gradient(45deg, #FC8EAC, #FFC1CC, #E75480);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0; // Changed from 15px
+}
+
+.product-name {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #030202; // Use color from your inline style
+  font-family: 'Roboto', sans-serif; // Use font from your inline style
+  font-weight: bold; // Use font-weight from your inline style
+}
+
+.product-price {
+  font-size: 1.2em;
+  color: #000000; // Use color from your inline style
+}
+
+// Android-specific adjustments
 @media only screen and (max-width: 600px) {
   .product-container {
     gap: 24px;
     padding: 10px 0;
   }
-  .product-card {
-    width: 95vw;
-    max-width: 340px;
-    min-width: 180px;
-  }
+  
   .left-column,
   .right-column {
     max-width: 100vw;
@@ -27,9 +102,9 @@
 .featured-products-label {
   display: block;
   text-align: center;
-  margin: 40px auto 24px auto;
-  font-size: 32px;
-  color: #fff;
+  margin: 20px auto 10px auto;
+  font-size: 30px;
+  color: #000000; // Use color from your inline style
   font-family: 'Luckiest Guy', cursive;
 }
 .categories, .popular-items {
@@ -124,8 +199,11 @@ ion-button {
   margin-left: 16px; 
 }
 
+// Combined ion-icon styles
 ion-icon{
   color: #ff9900;
+  font-size: 22px;
+  margin-right: 4px; 
 }
 
 ion-title{
@@ -134,54 +212,6 @@ ion-title{
   color:#DD4D89;
   letter-spacing: 1.5px;
 }
-
-.product-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 200px;
-  padding: 20px 0;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.product-card {
-  position: relative;
-  border-radius: 20px;
-  padding: 15px;
-  text-align: center;
-  width: 320px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.188);
-  transition: all 0.3s ease;
-  background: #fff;
-  margin: 0 auto;
-}
-
-.product-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-}
-
-.product-image {
-  background: linear-gradient(45deg, #FC8EAC, #FFC1CC, #E75480);
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-}
-
-.product-name {
-  font-size: 20px;
-  margin: 10px 0;
-  color: #B2456E;
-}
-
-.product-price {
-  font-size: 1.2em;
-  color: #B2456E;
-}
-
 
 .heart-icon {
   font-size: 30px;
@@ -285,12 +315,6 @@ ion-title{
   justify-content: flex-start;
 }
 
-ion-icon {
-  font-size: 22px;
-  margin-right: 4px; 
-}
-
-
 .reviews-container::-webkit-scrollbar {
   display: none;
 }
@@ -313,18 +337,14 @@ ion-icon {
   width: 100%;
 }
 
+// Combined see-more-icon styles
 see-more-icon {
   color: #3880ff; 
   cursor: pointer;
   transition: transform 0.3s ease;
+  margin-top: 10px;
 }
 
 see-more-icon:hover {
   transform: scale(1.2); 
 }
-
-see-more-icon {
-  margin-top: 10px;
-}
-
-

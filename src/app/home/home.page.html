@@ -20,89 +20,86 @@
     </ion-buttons> 
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
 
-<!-- Featured Products Section -->
-<h2 class="featured-products-label" style="color: #000000; font-family: 'Luckiest Guy', cursive; font-size: 30px; padding-left: 20px; margin-top: 20px;">Featured Products</h2>
-<div class="product-container">
-  <!-- Left Column (2 Products) -->
-  <div class="left-column" style="flex: 1; display: flex; flex-direction: column; gap: 5px; width: 48%; max-width: 500px;">
-    <!-- Product 1 -->
-    <div class="product-card" (click)="goToProductsPage()" style="background-color: #ffffff; padding: 15px; margin-bottom: 15px; border-radius: 12px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); height: 350px; width: 100%;">
-      <img src="assets/image/Enreity.jpg" alt="Energy" class="product-image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
-      <h3 class="product-name" style="color: #030202; font-family: 'Roboto', sans-serif; font-weight: bold;">Energy</h3>
-      <p class="product-price" style="color: #000000;">₱299.99</p>
+  <h2 class="featured-products-label">Featured Products</h2>
+  
+  <swiper-container
+    [slides-per-view]="1.2"
+    [space-between]="10"
+    [centered-slides]="true"
+    [loop]="true"
+    [autoplay]="{ delay: 3000 }"
+    [navigation]="true"
+    [pagination]="true"
+  >
+
+    <swiper-slide (click)="goToProductsPage()">
+      <div class="product-card">
+        <img src="assets/image/RedbullBanner.webp" alt="Energy" class="product-image">
+      </div>
+    </swiper-slide>
+  
+    <swiper-slide (click)="goToProductsPage()">
+      <div class="product-card">
+        <img src="assets/image/MonsterDrinks.jpg  " alt="Energy" class="product-image">
+      </div>
+    </swiper-slide>
+
+    <swiper-slide (click)="goToProductsPage()">
+      <div class="product-card">
+        <img src="assets/image/DelmonteBanner.png" alt="Milk Chocolate Box" class="product-image">
+      </div>
+    </swiper-slide>
+
+    <swiper-slide (click)="goToProductsPage()">
+      <div class="product-card">
+        <img src="assets/image/C2Banner.jpg" alt="Chocolate Fudge Cake" class="product-image">
+      </div>
+    </swiper-slide>
+
+  </swiper-container>
+  <div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:45vh;">
+
+    <h2 class="offer-label" 
+        style="color:#000000; font-family:'Luckiest Guy', cursive; font-size:30px; margin-bottom:20px;">
+      Today's Offer
+    </h2>
+
+    <div class="carousel-container" style="padding:0 20px;">
+      <div class="carousel-item">
+        <img src="assets/image/offer.png" alt="Slide 1" style="width:100%; border-radius:12px;">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/image/c2offer.png" alt="Slide 2" style="width:100%; border-radius:12px;">
+      </div>
     </div>
 
-    <!-- Product 2 -->
-    <div class="product-card" (click)="goToProductsPage()" style="background-color: #ffffff; padding: 15px; margin-bottom: 15px; border-radius: 12px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); height: 350px; width: 100%;">
-      <img src="assets/image/display.png" alt="Energy" class="product-image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
-      <h3 class="product-name" style="color: #000000; font-family: 'Roboto', sans-serif; font-weight: bold;">Energy</h3>
-      <p class="product-price" style="color: #000000;">₱149.99</p>
-    </div>
   </div>
 
-  <!-- Right Column (2 Products) -->
-  <div class="right-column" style="flex: 1; display: flex; flex-direction: column; gap: 5px; width: 48%; max-width: 500px;">
-    <!-- Product 3 -->
-    <div class="product-card" (click)="goToProductsPage()" style="background-color: #ffffff; padding: 15px; margin-bottom: 15px; border-radius: 12px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); height: 350px; width: 100%;">
-      <img src="assets/image/JuiceBanner.jpg" alt="Milk Chocolate Box" class="product-image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
-      <h3 class="product-name" style="color: #000000; font-family: 'Roboto', sans-serif; font-weight: bold;">Juice</h3>
-      <p class="product-price" style="color: #000000;">₱249.99</p>
-    </div>
-
-    <!-- Product 4 -->
-    <div class="product-card" (click)="goToProductsPage()" style="background-color: #ffffff; padding: 15px; margin-bottom: 15px; border-radius: 12px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); height: 350px; width: 100%;">
-      <img src="assets/image/C2Banner.jpg" alt="Chocolate Fudge Cake" class="product-image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
-      <h3 class="product-name" style="color: #000000; font-family: 'Roboto', sans-serif; font-weight: bold;">Juice</h3>
-      <p class="product-price" style="color: #000000;">₱129.99</p>
-    </div>
-  </div>
-</div>
-  <!-- Today's Offer Section -->
-<div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:45vh;">
-
-  <h2 class="offer-label" 
-      style="color:#000000; font-family:'Luckiest Guy', cursive; font-size:30px; margin-bottom:20px;">
-    Today's Offer
-  </h2>
-
-  <div class="carousel-container" style="padding:0 20px;">
-    <div class="carousel-item">
-      <img src="assets/image/offer.png" alt="Slide 1" style="width:100%; border-radius:12px;">
-    </div>
-    <div class="carousel-item">
-      <img src="assets/image/c2offer.png" alt="Slide 2" style="width:100%; border-radius:12px;">
-    </div>
-  </div>
-
-</div>
-
-  <!-- About Us Section -->
   <div class="about-us" style="padding: 20px; background-color: #7ecdf1; margin-top: 40px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
     <h2 style="color: #000000; font-family: 'Luckiest Guy', cursive; font-size: 30px;">About Us</h2>
      <h4 class="about-us-text" style="color: #000000; font-family: 'Roboto', sans-serif;">At ReCharge, we empower your day with premium energy drinks crafted to fuel your passion, boost your focus, and help you conquer every challenge with confidence.</h4>
   </div>
 
-<!-- Customer Reviews Section -->
-<div class="reviews-container" style="padding: 20px;"><h2 class="customer-reviews-label" style="color: #000000; font-family: 'Luckiest Guy', cursive; font-size: 30px;">Customer Reviews</h2>
-  <div class="review-card" *ngFor="let review of reviews" style="background-color: #7ecdf1; padding: 15px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-    <div class="image-container" style="width: 50px; height: 50px; overflow: hidden; border-radius: 50%; margin-bottom: 10px;">
-      <img [src]="review.avatar" alt="Customer Image" class="review-image" style="width: 100%; height: 100%; object-fit: cover;">
-    </div>
-    <div class="review-content">
-      <h3 class="review-name" style="color: #000000; font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: bold;">{{ review.name }}</h3>
-      <div class="star-rating" style="margin: 5px 0;">
-        <ion-icon *ngFor="let star of getStars(review.rating); let i = index"
-                  name="star" 
-                  [style.color]="i < review.rating ? '#FFD700' : '#ccc'"></ion-icon>
+  <div class="reviews-container" style="padding: 20px;"><h2 class="customer-reviews-label" style="color: #000000; font-family: 'Luckiest Guy', cursive; font-size: 30px;">Customer Reviews</h2>
+    <div class="review-card" *ngFor="let review of reviews" style="background-color: #7ecdf1; padding: 15px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <div class="image-container" style="width: 50px; height: 50px; overflow: hidden; border-radius: 50%; margin-bottom: 10px;">
+        <img [src]="review.avatar" alt="Customer Image" class="review-image" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
-      <p class="review-comment" style="color: #000000; font-family: 'Roboto', sans-serif;">{{ review.comment }}</p>
+      <div class="review-content">
+        <h3 class="review-name" style="color: #000000; font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: bold;">{{ review.name }}</h3>
+        <div class="star-rating" style="margin: 5px 0;">
+          <ion-icon *ngFor="let star of getStars(review.rating); let i = index"
+                    name="star" 
+                    [style.color]="i < review.rating ? '#FFD700' : '#ccc'"></ion-icon>
+        </div>
+        <p class="review-comment" style="color: #000000; font-family: 'Roboto', sans-serif;">{{ review.comment }}</p>
+      </div>
     </div>
   </div>
-</div>
 
-  <!-- Instagram Feed / Social Media Integration Section -->
   <div class="instagram-feed" style="background-color: #7ecdf1; padding: 40px 20px; text-align: center; color: #000000;">
     <h2 style="font-family: 'Luckiest Guy', cursive; font-size: 30px; margin-bottom: 20px;">Follow Us on Instagram</h2>
     <p style="font-family: 'Roboto', sans-serif; font-size: 16px;">Get inspired and share your tots for energy drink with #ReCharge</p>
