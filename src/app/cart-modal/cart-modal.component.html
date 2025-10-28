@@ -1,48 +1,56 @@
 <ion-header>
-  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-  <ion-toolbar class="cart-toolbar">
+  <ion-toolbar>
     <ion-title>Cart</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="closeModal()" class="close-btn">Close</ion-button>
+      <ion-button (click)="closeModal()">Close</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item *ngFor="let item of cartItems; let i = index" class="cart-item">
-    <ion-thumbnail slot="start">
-      <img [src]="item.image" alt="{{ item.name }}" />
-    </ion-thumbnail>
-    <ion-label class="item-details">
-      <h2>{{ item.name }}</h2>
-      <p>Price: ₱{{ item.price.toFixed(2) }}</p>
-      <p>
-        Quantity:
-        <ion-buttons>
-          <ion-button (click)="decreaseQuantity(i)" color="danger">-</ion-button>
-          <span>{{ item.quantity }}</span>
-          <ion-button (click)="increaseQuantity(i)" color="danger">+</ion-button>
-        </ion-buttons>
-      </p>
-      <p>Total: ₱{{ (item.price * item.quantity).toFixed(2) }}</p>
-    </ion-label>
-    <ion-button slot="end" color="danger" (click)="deleteItem(i)" class="delete-btn">Delete</ion-button>
-  </ion-item>
+  <ion-list lines="none">
+    <ion-item *ngFor="let item of cartItems; let i = index" class="cart-item">
+      <ion-thumbnail slot="start">
+        <img [src]="item.image" alt="{{ item.name }}" />
+      </ion-thumbnail>
+
+      <ion-label class="item-details">
+        <h2>{{ item.name }}</h2>
+        <p>₱{{ item.price.toFixed(2) }} (each)</p>
+        <p class="item-subtotal">Total: ₱{{ (item.price * item.quantity).toFixed(2) }}</p>
+      </ion-label>
+
+      <div slot="end" class="item-controls">
+        <div class="quantity-selector">
+          <ion-button fill="clear" size="small" (click)="decreaseQuantity(i)" color="dark">
+            <ion-icon name="remove-circle-outline" slot="icon-only"></ion-icon>
+          </ion-button>
+          
+          <span classm="quantity-value">{{ item.quantity }}</span>
+          
+          <ion-button fill="clear" size="small" (click)="increaseQuantity(i)" color="dark">
+            <ion-icon name="add-circle-outline" slot="icon-only"></ion-icon>
+          </ion-button>
+        </div>
+
+        <ion-button fill="clear" size="small" color="danger" (click)="deleteItem(i)" class="delete-btn">
+          <ion-icon name="trash-outline" slot="icon-only"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-item>
+  </ion-list>
 
   <div class="total">
-    <ion-item lines="light" class="cart-summary">
-      <ion-label class="cart-summary-label">Subtotal</ion-label>
-      <ion-note class="cart-summary-value">₱{{ getSubtotal() }}</ion-note>
-    </ion-item>
-    
     <ion-item lines="none" class="cart-summary">
       <ion-label class="label">Total</ion-label>
       <ion-note class="cart-summary-value">₱{{ getTotal() }}</ion-note>
     </ion-item>
   </div>
 
-  <ion-footer>
-    <ion-button expand="block" class="checkout-btn" (click)="checkout()">Checkout</ion-button>
-  </ion-footer>
-
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" class="checkout-btn" (click)="checkout()">Checkout</ion-button>
+  </ion-toolbar>
+</ion-footer>

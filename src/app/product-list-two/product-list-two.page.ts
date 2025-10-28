@@ -85,10 +85,10 @@ export class ProductListTwoPage implements OnInit, OnDestroy {
 
   getProductDetails(index: number): Product {
     const products: Product[] = [
-      { name: 'Chocolate Truffles', price: 299.99, image: 'assets/image/truffles.jpg', quantity: 0 },
-      { name: 'Dark Chocolate Bar', price: 149.99, image: 'assets/image/chocobar.jpg', quantity: 0 },
-      { name: 'Milk Chocolate Box', price: 249.99, image: 'assets/image/milkchocolate.jpg', quantity: 0 },
-      { name: 'Chocolate Fudge', price: 129.99, image: 'assets/image/fudge.jpg', quantity: 0 }
+      { name: 'C2 Iced Tea', price: 59.99, image: 'assets/image/C2.png', quantity: 0 },
+      { name: 'Delmonte Pineapple', price: 120.99, image: 'assets/image/DelmontePineapple.png', quantity: 0 },
+      { name: 'Fruity Juicy', price: 229.99, image: 'assets/image/FNR.png', quantity: 0 },
+      { name: 'Pure Juice', price: 250.99, image: 'assets/image/PureJC.png', quantity: 0 }
     ];
     return products[index];
   }

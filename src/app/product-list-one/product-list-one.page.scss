@@ -18,16 +18,6 @@ ion-icon{
     margin-top: 10px;
   }
   
-  .product-card {
-    position: relative;
-    border-radius: 20px;
-    padding: 15px;
-    text-align: center;
-    width: calc(50% - 20px); 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.188);
-    transition: all 0.3s ease;
-  }
-  
   .product-card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
@@ -94,40 +84,34 @@ ion-icon{
     background-color: #ec8f04; 
   }
 
-  .banner {
-    width: 100%;
-    height: 92.1vh;                     // full screen height
-    position: relative;                // for overlaying product container
-    background-image: url('/assets/image/banner.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 
-  .product-container {
-    position: absolute;              // overlay
-    bottom: 130px;                    // distance from bottom of banner
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 100px;
-    justify-content: center;
-    width: 90%;                      // adjust container width; 
+  ion-content {
+    --background: url('/assets/image/banner.jpg') center center/cover no-repeat;
+  }
+
+  .product-list-grid {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 
   .product-card {
-    width: 200px;                    // card width
-    background-color: rgba(255, 255, 255, 0.644); // semi-transparent
+    background-color: rgba(255, 255, 255, 0.85);
     border-radius: 12px;
     padding: 15px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-
-    .product-image {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-}
+
+  .product-image {
+    width: 100%;
+    max-width: 180px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }

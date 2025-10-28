@@ -22,56 +22,60 @@
 </ion-header>
 
 <ion-content>
-  <div class="banner">
-    <!-- Product container goes inside the banner -->
-    <div class="product-container">
-      <div class="product-card">
-        <img src="assets/image/monster.png" alt="Regular" class="product-image" />
-        <h2 class="product-name">Monster (Regular)</h2>
-        <p class="product-price">₱400.00</p>
-        <div class="quantity-selector">
-          <button (click)="decreaseQuantity(0)">-</button>
-          <input type="number" [value]="quantities[0]" readonly />
-          <button (click)="increaseQuantity(0)">+</button>
+  <ion-grid class="product-list-grid">
+    <ion-row>
+      <ion-col size="12" size-sm="6" size-md="4" size-lg="3">
+        <div class="product-card">
+          <img src="assets/image/monster.png" alt="Regular" class="product-image" />
+          <h2 class="product-name">Monster (Regular)</h2>
+          <p class="product-price">₱400.00</p>
+          <div class="quantity-selector">
+            <button (click)="decreaseQuantity(0)">-</button>
+            <input type="number" [value]="quantities[0]" readonly />
+            <button (click)="increaseQuantity(0)">+</button>
+          </div>
+          <button class="add-to-cart-btn" (click)="addToCart(0)">Add to Cart</button>
         </div>
-        <button class="add-to-cart-btn" (click)="addToCart(0)">Add to Cart</button>
-      </div>
-
-      <div class="product-card">
-        <img src="assets/image/redbull.png" alt="Large" class="product-image" />
-        <h2 class="product-name">RedBull (Regular)</h2>
-        <p class="product-price">₱136.00</p>
-        <div class="quantity-selector">
-          <button (click)="decreaseQuantity(1)">-</button>
-          <input type="number" [value]="quantities[1]" readonly />
-          <button (click)="increaseQuantity(1)">+</button>
+      </ion-col>
+      <ion-col size="12" size-sm="6" size-md="4" size-lg="3">
+        <div class="product-card">
+          <img src="assets/image/redbull.png" alt="Large" class="product-image" />
+          <h2 class="product-name">RedBull (Regular)</h2>
+          <p class="product-price">₱136.00</p>
+          <div class="quantity-selector">
+            <button (click)="decreaseQuantity(1)">-</button>
+            <input type="number" [value]="quantities[1]" readonly />
+            <button (click)="increaseQuantity(1)">+</button>
+          </div>
+          <button class="add-to-cart-btn" (click)="addToCart(1)">Add to Cart</button>
         </div>
-        <button class="add-to-cart-btn" (click)="addToCart(1)">Add to Cart</button>
-      </div>
-
-      <div class="product-card">
-        <img src="assets/image/rockstar.png" alt="Jumbo" class="product-image" />
-        <h2 class="product-name">Rockstar (Regular)</h2>
-        <p class="product-price">₱165.00</p>
-        <div class="quantity-selector">
-          <button (click)="decreaseQuantity(2)">-</button>
-          <input type="number" [value]="quantities[2]" readonly />
-          <button (click)="increaseQuantity(2)">+</button>
+      </ion-col>
+      <ion-col size="12" size-sm="6" size-md="4" size-lg="3">
+        <div class="product-card">
+          <img src="assets/image/rockstar.png" alt="Jumbo" class="product-image" />
+          <h2 class="product-name">Rockstar (Regular)</h2>
+          <p class="product-price">₱165.00</p>
+          <div class="quantity-selector">
+            <button (click)="decreaseQuantity(2)">-</button>
+            <input type="number" [value]="quantities[2]" readonly />
+            <button (click)="increaseQuantity(2)">+</button>
+          </div>
+          <button class="add-to-cart-btn" (click)="addToCart(2)">Add to Cart</button>
         </div>
-        <button class="add-to-cart-btn" (click)="addToCart(2)">Add to Cart</button>
-      </div>
-
-      <div class="product-card">
-        <img src="assets/image/milo.png" alt="Mega" class="product-image" />
-        <h2 class="product-name">Milo (Regular)</h2>
-        <p class="product-price">₱74.99</p>
-        <div class="quantity-selector">
-          <button (click)="decreaseQuantity(3)">-</button>
-          <input type="number" [value]="quantities[3]" readonly />
-          <button (click)="increaseQuantity(3)">+</button>
+      </ion-col>
+      <ion-col size="12" size-sm="6" size-md="4" size-lg="3">
+        <div class="product-card">
+          <img src="assets/image/milo.png" alt="Mega" class="product-image" />
+          <h2 class="product-name">Milo (Regular)</h2>
+          <p class="product-price">₱74.99</p>
+          <div class="quantity-selector">
+            <button (click)="decreaseQuantity(3)">-</button>
+            <input type="number" [value]="quantities[3]" readonly />
+            <button (click)="increaseQuantity(3)">+</button>
+          </div>
+          <button class="add-to-cart-btn" (click)="addToCart(3)">Add to Cart</button>
         </div>
-        <button class="add-to-cart-btn" (click)="addToCart(3)">Add to Cart</button>
-      </div>
-    </div>
-  </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
