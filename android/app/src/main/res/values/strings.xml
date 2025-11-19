@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">frost&amp;frizz</string>
-    <string name="title_activity_main">frost&amp;frizz</string>
+    <string name="app_name">ReCharge</string>
+    <string name="title_activity_main">ReCharge</string>
     <string name="package_name">io.ionic.starter</string>
     <string name="custom_url_scheme">io.ionic.starter</string>
 </resources>
